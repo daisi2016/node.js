@@ -1,0 +1,201 @@
+/* font css */
+.rowtitle_blue {
+	font-weight: bold;
+	color: #279CE4;
+}
+
+/* rows css */
+.row_root {
+	cursor: pointer;
+}
+
+.row_active {
+	
+}
+
+.row_child {
+	
+}
+
+.td_title {
+	text-align: left !important;
+}
+
+.row_root .td_title .item-icon {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-image: url(../images/accordion/plus.png);
+	margin-left: 25px;
+	margin-top: 3px;
+	margin-right: 10px;
+	vertical-align: text-bottom;
+}
+
+.row_active .td_title .item-icon {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-image: url(../images/accordion/minus.png);
+	margin-left: 25px;
+	margin-top: 3px;
+	margin-right: 10px;
+	vertical-align: text-bottom;
+}
+
+.flow_button_rows {
+	width: auto;
+}
+
+.flow_button_rows input[type=button] {
+	float: right;
+	display: inline-block;
+}
+
+.flow_button_rows input[type=submit] {
+	float: right;
+	display: inline-block;
+}
+
+/* pages layout */
+.business-div {
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #D0D0D0;
+	border-left: 1px solid #D0D0D0;
+	border-right: 1px solid #D0D0D0;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 10px;
+}
+
+.business-div-active {
+	padding-bottom: 15px;
+}
+
+.business-div-active .business-title span {
+	background-image: url(../images/admin/arrow_downToShow.png);
+	background-repeat: no-repeat;
+}
+
+.business-title {
+	width: 100%;
+	height: auto;
+}
+
+.business-title span {
+	background-image: url(../images/admin/arrow_upToHide.png);
+	background-repeat: no-repeat;
+	display: block;
+	padding-left: 20px;
+	width: 100%;
+	height: 25px;
+	line-height: 12px;
+	font-weight: bold;
+}
+
+.business-info {
+	width: 100%;
+	border: 1px solid #E4EAF1;
+}
+
+.business-state {
+	width: 100%;
+	background-image: url(../images/admin/business_title_bg.png);
+	background-repeat: repeat-x;
+	height: 34px;
+	border-bottom: 1px solid #E4EAF1;
+}
+
+.business-state a {
+	display: inline-block;
+	background-color: #fff;
+	height: 30px;
+	margin-top: 4px;
+	margin-left: 25px;
+	width: 100px;
+	color: #0F8CCC;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.business-state a:hover {
+	text-decoration: none;
+}
+
+.business-sub-div {
+	width: 100%;
+}
+
+.business-sub-tabs {
+	float: left;
+	height: 145px;
+	width: 125px;
+}
+
+.business-sub-tabs span {
+	margin-top: 10px;
+	margin-left: 10px;
+	float: left;
+	display: block;
+	height: auto;
+	width: 105px;
+	color: #999999;
+	font-weight: bold;
+}
+
+.business-sub-tabs span span {
+	margin-top: 8px;
+	margin-right: 7px;
+	display: inline-block;
+	height: 7px;
+	width: 13px;
+}
+
+.business-sub-tabs span .tab-on {
+	background-image: url(../images/admin/arrow_goToShow.png);
+	background-repeat: no-repeat;
+}
+
+.business-sub-ver {
+	float: left;
+	height: 145px;
+	width: 1px;
+	background-image: url(../images/admin/line_ver.png);
+	background-repeat: no-repeat;
+}
+
+.business-sub-info {
+	display: inline-block;
+	width: 803px;
+	height: 145px;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+.businessItems {
+	display: inline-block;
+	width: 155px;
+	height: 25px;
+	padding-top: 2px;
+}
+
+.businessItems input[type=checkbox] {
+	float: left;
+	margin-right: 10px;
+}
+
+.businessItems label {
+	float: left;
+	margin: 0;
+	font-weight: normal;
+	width: 125px;
+	white-space: nowrap;
+	word-wrap: normal;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}

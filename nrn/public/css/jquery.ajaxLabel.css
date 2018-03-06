@@ -1,0 +1,29 @@
+/* base css */
+
+.ajax-lable-default{
+	cursor: pointer;
+}
+
+.ajax-lable-icon:after{
+	content: url(../images/ajaxLable/lable-edit.png);
+	margin-left: 5px;
+}
+
+.ajax-lable-save{
+	float: right;
+	display: inline-block;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	background-image:url(../images/ajaxLable/button_ok.png);
+	background-repeat: no-repeat;
+}
+.ajax-lable-cancel{
+	float: right;
+	display: inline-block;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	background-image:url(../images/ajaxLable/gtk_close.png);
+	background-repeat: no-repeat;
+}

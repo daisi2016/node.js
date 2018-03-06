@@ -1,0 +1,125 @@
+.indexBG {
+	width: 100%;
+	height: 567px;
+	background-image: url(../images/index/indexBG.jpg);
+	background-repeat: repeat-x;
+	background-color: #0F8CCC;
+}
+
+.index_center {
+	margin: 0 auto;
+	max-width: 1346px;
+	min-width: 1149px;
+	height: 567px;
+	background-image: url(../images/index/indexcenter.jpg);
+	background-repeat: no-repeat;
+	padding-top: 160px;
+	padding-left: 274px;
+}
+
+#index_footer {
+	background-color: #1d1d1d;
+	height: 100px;
+	width: 100%;
+	padding-top: 20px;
+	padding-left: 30px;
+}
+
+#index_footer p {
+	font-size: 12px;
+	color: #d8d8d8;
+}
+
+.main_icons {
+	height: auto;
+	width: 830px;
+}
+
+.main_icons a {
+	margin-top: 30px;
+	margin-right: 12px;
+	display: block;
+	float: left;
+	height: 164px;
+	width: 153px;
+	cursor: pointer;
+}
+
+.main_icons a:first-child {
+	margin-left: 0px;
+}
+
+.index_icon_1 {
+	background-image: url(../images/index/index_icon_1.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_2 {
+	background-image: url(../images/index/index_icon_2.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_3 {
+	background-image: url(../images/index/index_icon_3.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_4 {
+	background-image: url(../images/index/index_icon_4.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_5 {
+	background-image: url(../images/index/index_icon_5.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_1:hover {
+	background-image: url(../images/index/index_icon_1_on.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_2:hover {
+	background-image: url(../images/index/index_icon_2_on.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_3:hover {
+	background-image: url(../images/index/index_icon_3_on.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_4:hover {
+	background-image: url(../images/index/index_icon_4_on.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_5:hover {
+	background-image: url(../images/index/index_icon_5_on.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_1_off {
+	background-image: url(../images/index/index_icon_1_off.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_2_off {
+	background-image: url(../images/index/index_icon_2_off.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_3_off {
+	background-image: url(../images/index/index_icon_3_off.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_4_off {
+	background-image: url(../images/index/index_icon_4_off.png);
+	background-repeat: no-repeat;
+}
+
+.index_icon_5_off {
+	background-image: url(../images/index/index_icon_5_off.png);
+	background-repeat: no-repeat;
+}

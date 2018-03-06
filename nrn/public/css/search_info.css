@@ -1,0 +1,31 @@
+.search_info_layout {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.pages_paging_layout {
+	width: 350px;
+	float: right;
+}
+
+.select_pages {
+	float: right;
+}
+
+.float_pages {
+	display: block !important;
+}
+
+.select_pages_list {
+	min-width: 0px !important;
+}
+
+.rows_span {
+	height: auto;
+	width: auto;
+	font-size: 14px;
+	margin-left: 20px;
+	margin-right: 10px;
+	display: inline-block;
+}

@@ -1,0 +1,104 @@
+/* Root CSS */
+.menu_tree {
+	width: auto;
+	background-color: #FBFBFB;
+	height: auto;
+}
+
+.root_tree {
+	padding: 0;
+}
+
+.root_tree>li {
+	display: block;
+	background-color: #F5F5F5;
+	border-bottom: #D6D6D6 solid 1px;
+	width: auto;
+	min-height: 42px;
+	list-style-type: none;
+	margin-top: 1px;
+}
+
+.root_tree>li>a {
+	display: block;
+	font-weight: bold;
+	color: #46A8CF;
+	cursor: pointer;
+	padding-top: 12px;
+	padding-left: 45px;
+	height: 40px;
+}
+
+.root_tree li a:hover {
+	text-decoration: none;
+}
+
+.root_tree li ul {
+	display: block;
+	padding: 0;
+	background-color: #F8F8F8;
+	padding-bottom: 10px;
+}
+
+.root_tree li ul li {
+	display: block;
+	width: auto;
+	min-height: 0px;
+	list-style-type: none;
+	border-bottom: none;
+	background-image: url(../images/menutree/play.png);
+	background-repeat: no-repeat;
+	background-position: 30px 15px;
+}
+
+.root_tree li ul li a {
+	display: block;
+	color: #7A7A7A;
+	cursor: pointer;
+	padding-top: 7px;
+	padding-left: 45px;
+	height: 30px;
+}
+
+/* node CSS */
+.nodeChild {
+	padding-left: 20px !important;
+	padding-bottom: 0px !important;
+}
+
+.nodeSelect {
+	color: #000 !important;
+	font-weight: bold;
+}
+
+.nodeCollapsed {
+	display: none !important;
+}
+
+.nodeExtend {
+	color: #000 !important;
+}
+
+.rootNodeCollapsed {
+	background-image: url(../images/menutree/plus.png);
+	background-repeat: no-repeat;
+	background-position-x: 95%;
+	background-position-y: 50%
+}
+
+.rootNodeExtend {
+	background-image: url(../images/menutree/minus.png);
+	background-repeat: no-repeat;
+	background-position-x: 95%;
+	background-position-y: 50%
+}
+
+.nodeHasChild {
+	width: 13px;
+	height: 13px;
+}
+
+.nodeChildIcon {
+	width: 13px;
+	height: 13px;
+}

@@ -1,0 +1,152 @@
+/* step 1 */
+.ul-answer {
+	list-style-type: upper-alpha;
+	height: 380px;
+	overflow-y: auto;
+}
+
+.ul-answer li {
+	line-height: 35px;
+}
+
+/* step 2 */
+.ul-answer-list {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 35px;
+	list-style-type: decimal;
+	min-height: 400px;
+}
+
+.ul-answer-list li {
+	line-height: 35px;
+	padding-left: 20px;
+	background-color: #fff;
+	border: 1px solid #DDDDDD;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.ul-answer-list li span {
+	display: inline-block;
+	width: 360px;
+	vertical-align: middle;
+	overflow: hidden;
+	white-space: nowrap;
+	word-wrap: normal;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+
+.line-arrow {
+	display: inline-block;
+	width: 40px;
+	height: auto;
+	margin-top: -100px;
+}
+
+.line-arrow .left {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-image: url(../images/admin/back.jpg);
+	top: 170px;
+	position: relative;
+}
+
+.line-arrow .right {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-image: url(../images/admin/forward.jpg);
+	top: 300px;
+	position: relative;
+}
+
+.type-1 {
+	display: inline-block;
+	background-image: url(../images/admin/answer-layout-left.png);
+	background-repeat: no-repeat;
+	height: 468px;
+	width: 468px;
+}
+
+.type-2 {
+	display: inline-block;
+	background-image: url(../images/admin/answer-layout-right.png);
+	background-repeat: no-repeat;
+	height: 468px;
+	width: 468px;
+}
+
+.type-hr {
+	display: inline-block;
+	border-color: #44AEEC;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.type-title {
+	width: 435px;
+	display: inline-block;
+	margin-left: 15px;
+	padding-top: 15px;
+}
+
+.type-title span {
+	width: 100%;
+	display: inline-block;
+	padding-left: 35px;
+}
+
+.type-title span font {
+	font-weight: bold;
+	color: #0F8CCC;
+}
+
+#answer-list-1 {
+	height: 420px;
+	overflow-y: auto;
+	padding-right: 10px;
+}
+
+#answer-list-2 {
+	height: 420px;
+	overflow-y: auto;
+	padding-right: 10px;
+}
+
+/* step 3 */
+.test-preview {
+	width: 100%;
+	height: 560px;
+	overflow-y: auto;
+	margin-top: 20px;
+}
+
+.ul-answer-preview {
+	list-style-type: upper-alpha;
+}
+
+.ul-answer-preview li {
+	line-height: 35px;
+}
+
+.answer-item {
+	width: 100%;
+	display: inline-block;
+}
+
+.answer-item>span {
+	width: 100%;
+	display: inline-block;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #000000;
+}
+
+.answer-item>span>font {
+	margin-right: 10px;
+}

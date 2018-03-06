@@ -1,0 +1,242 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8;IE=9;IE=10;IE=11">
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="/css/login.css" rel="stylesheet" type="text/css" />
+    <link href="/css/common.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/common.js"></script>
+    <title>柜台业务办理系统</title>
+    <style type="text/css">
+        input[type=text] {
+            display: block;
+        }
+
+        input[type=password] {
+            display: block;
+        }
+    </style>
+     <script type="text/javascript">
+        function formvalidatSuccess() {
+        }
+        function formvalidatFailure() {
+            $(".div_warning").text("员工号或密码不能为空");
+            $(".div_warning").fadeIn().delay(1800).fadeOut();
+        }
+
+
+        function error() {
+            $("#warn").text("登陆失败");
+            $("#warn").fadeIn().delay(1800).fadeOut();
+        }
+
+        /** 设置key-value至cookie */
+        function setCookie(key, value) {
+            var Days = 30;// 30天
+            var exp = new Date();
+            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+            // escape()对值进行编码
+            document.cookie = key + "=" + escape(value) + ";expires=" + exp.toGMTString();
+        }
+
+        /** 根据key获取cookie信息 */
+        function getCookie(key) {
+            var arrStr = document.cookie.split(";");
+            for (var i = 0; i < arrStr.length; i++) {
+                var temp = arrStr[i].split("=");
+                if (key == temp[0]) {
+                    // unescape() 函数可对通过 escape() 编码的字符串进行解码
+                    return unescape(temp[1]);
+                }
+            }
+        }
+
+        //Text Tips
+        function inputTipText() {
+            $("input[class*=grayTips]") //所有样式名中含有grayTips的input
+                .each(function() {
+                    //var oldVal=$(this).val();   //默认的提示性文本
+                    var oldVal = "员工号";
+                    $(this).focus(function() {
+                        if ($(this).val() != oldVal) {
+                        } else {
+                            $(this).val("")
+                        }
+                    }).blur(function() {
+                        if ($(this).val() == "") {
+                            $(this).val(oldVal)
+                        }
+                    });
+                });
+        }
+
+        $(document).ready(function() {
+
+            // 从cookie中获取用户名并设置到用户名输入框
+            $("#userName").val(getCookie("userName"));
+
+            // 		JsInclude("${pageContext.request.contextPath}" + "/themes/default/");
+            $("#login_main").height($(document).height() - 60);
+            $('input[name=userCode]').focus();
+            $('input[name=userCode]').blur(function() {
+                var reg = /^\d+$/;
+                if (reg.test($(this).val())) {
+                    var strLength = $(this).val().length;
+                    var str = $(this).val();
+                    for (var i = 0; i < 6 - strLength; i++) {
+                        str = '0' + str;
+                    }
+                    $('input[name=userCode]').val(str);
+
+                }
+            });
+            $('input[name=userCode]').keydown(function(e) {
+                if (e.keyCode == 13) {
+                    if ("" != $('input[name=password]').val()) {
+                        var textNode = $('input[name=password]').get(0);//获取你的文本域
+                        var count = textNode.value.length;//统计文本域里面有多少个字符了，注意留空不行额
+                        var a = textNode.createTextRange();//创建文本范围对象a
+                        a.moveStart('character', count); //更改范围起始位置
+                        a.collapse(false); //将插入点移动到当前范围的开始或结尾。
+                        a.select();
+                    } else {
+                        $('input[name=text_pwd]').focus();
+                    }
+                    return false;
+                }
+            });
+
+            // 		$("#user_form").validationEngine("detach");//取消注册表单验证事件
+
+            //Name Tips
+            inputTipText();
+            //Password Tips
+            $("input[name=text_pwd]").focus(function() {
+                $("input[name=text_pwd]").hide();
+                $("input[name=password]").show().focus();
+            });
+            $("input[name=password]").blur(function() {
+                if ($(this).val() == "") {
+                    $("input[name=text_pwd]").show();
+                    $("input[name=password]").hide();
+                }
+            })
+
+            //获取当前年份
+            var myDate = new Date();
+            myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+            $('#year').text(myDate.getFullYear());
+
+        });
+
+        function doGetClientInfo() {
+            try {
+                var obj = document.getElementById("activexVersion");
+                var version = "";
+                version = obj.GetActiveXVersion();
+                if (version != "") {
+                    document.getElementById("version").value = version;
+                } else {
+                    alert("运行环境Activex未安装；安装完成请刷新页面");
+                    //showDialog("success","信息提示","运行环境未安装,请检查；安装完成请刷新页面");
+                    return false;
+                }
+
+                var obj = document.getElementById("activexClientInfo");
+                var mac = obj.GetClientMacAddress();
+                if (mac == "") {
+                    alert("运行环境Activex未安装；安装完成请刷新页面");
+                    //showDialog("success","信息提示","运行环境未安装,请检查；安装完成请刷新页面");
+                    return false;
+                } else {
+                    document.getElementById("mac").value = mac;
+                    var ip = obj.GetIPAddress();
+                    document.getElementById("ip").value = ip;
+                }
+                return true;
+            } catch (e) {
+                alert(e.message);
+                return false;
+            }
+        }
+
+
+
+        function loginCheck() {
+           // var clientCheckFlag = doGetClientInfo();\
+            var clientCheckFlag =true;
+            if (clientCheckFlag == true) {
+               /* if ($('input[name=userCode]').val() == '' || $('input[name=password]').val() == '') {
+                    formvalidatFailure();
+                    return false;
+                }*/
+                 var form =$('#user_form')[0];
+                var $form = $(form);
+
+                    $.ajax({
+                        type: form.method || 'POST',
+                        url: $form.attr("action"),
+                        data: {"uname":'admin',"upwd":'admin'},
+                        dataType: "json",
+                        cache: false,
+                        success: function(data){
+                           // alert(data.name);
+                            setCookie('userName',data.name);
+                            window.location.href = "/main/index";
+                         },
+                        error: error,
+                    });
+
+                return false;
+            } else {
+                return clientCheckFlag;
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<div id="login_main">
+    <form id="user_form" action="/login" method="post">
+        <div id="login_form">
+            <div class="center_layout">
+                <div class="login_row">
+                    <input type="text" value="员工号" name="userCode" id="userName"  class="form-control text_210 input_login username grayTips" />
+                    <input id="mac" type="hidden" name="macAddress" />
+                    <input id="ip" type="hidden" name="ipAddress" />
+                    <input id="version" type="hidden" name="activexVersion" />
+                </div>
+                <div class="login_row">
+                    <input type="text" value="密码" name="text_pwd" class="form-control text_210 validate[required] password" />
+                    <input name="password" type="password" value="admin" class="form-control text_210 input_login1 password" style="display: none;" />
+                </div>
+                <div class="login_row">
+                    <input id="submit" type="submit" value="登录" class="form-control login_button" onclick="return loginCheck();" />
+                </div>
+
+                <div class="login_row" style="min-height: 30px; margin-top: 10px;">
+                    <label id="warn" class="div_warning" style="display: none;"></label>
+                </div>
+                <div class="login_row">
+						<span style="width: 290px; float: right;">
+							提示：首次登陆需要安装插件,
+							<a href="${pageContext.request.contextPath}/ActiveXDownload.jsp" target="_blank" class="div_plug">插件下载</a>
+						</span>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="login_footer">
+    <p>
+        &copy;2003-
+        <span id="year"></span>
+        &nbsp;&nbsp;&nbsp;海通证券股份有限公司 版权所有 <br /> 全国统一客户服务热线：95553 、4008888001
+    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+.account_tools_bar {
+	margin-top: 30px;
+	width: 100%;
+	height: 35px;
+}
+
+.account_tools_bar span {
+	float: left;
+	display: block;
+	margin-left: 5px;
+	padding-top: 8px;
+	font-size: 14px;
+	width: 196px;
+	height: 34px;
+	background-color: #C4C4C4;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+
+.account_tools_bar span:first-child {
+	margin-left: 0px !important;
+}
+
+.account_tools_bar a {
+	float: left;
+	display: block;
+	margin-left: 5px;
+	padding-top: 8px;
+	font-size: 14px;
+	width: 196px;
+	height: 34px;
+	background-color: #C4C4C4;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+
+.account_tools_bar a:first-child {
+	margin-left: 0px !important;
+}
+
+.account_tools_bar a:hover {
+	background-color: #F46000;
+}
+
+.account_tools_bar .menu_focus {
+	font-weight: bold;
+	background-color: #F46000;
+}
+
+.account_info {
+	margin-top: 30px;
+	width: 100%;
+	height: auto;
+}
+
+.account_bottom_bar {
+	padding-top: 5px;
+	margin-bottom: 5px;
+	width: 100%;
+	height: 40px;
+}
+
+.rows_span {
+	display: block;
+	float: left;
+	height: auto;
+	width: auto;
+	font-size: 14px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+.account_bottom_bar input {
+	float: left;
+}
+
+.ui_float_right {
+	float: right !important;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.rows_span {
+	margin-top: 3px;
+	height: auto;
+	width: auto;
+	font-size: 14px;
+	margin-left: 20px;
+	margin-right: 10px;
+}

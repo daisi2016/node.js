@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN" manifest="cache.manifest" xmlns="http://www.w3.org/1999/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%=title%></title>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/stylesheets/common.css"/>
+<script type="text/javascript" src="/jsboot/jquery.js"></script>
+<script type="text/javascript" src="/jsboot/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        function register() {
+            var flag = validateSimpleAjaxSubmit($('#user_form')[0], true, success, error);
+            return flag;
+
+               var form =$('#user_form')[0];
+             var $form = $(form);
+
+           $.ajax({
+                 type: form.method || 'POST',
+                 url: $form.attr("action"),
+                 data:$form.serializeArray(),
+                 dataType: "json",
+                 cache: false,
+                 success: function(data){
+                     success(data);
+                 },
+                 error: error (){
+                     error();
+                 },
+             });
+
+             return false;
+ */
+
+
+        }
+
+        function success(data) {
+
+            $("#msg").html("<div class=\"alert alert-success\">"+data.name+"注册完成!,结果:"+data.msg+"</div>");
+
+        }
+
+        function error() {
+         console.log("error")
+        }
+
+
+
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">员工平台</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">iOS</a></li>
+                <li><a href="#">SVN</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Java
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">jmeter</a></li>
+                        <li><a href="#">EJB</a></li>
+                        <li><a href="#">Jasper Report</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">分离的链接</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">另一个分离的链接</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!--<div id="myCarousel" class="carousel slide">-->
+      <!--<div class="carousel-inner">-->
+        <!--<div class="item active">-->
+          <!--<img src="/images/examples/slide-01.jpg" alt="">-->
+          <!--<div class="container">-->
+            <!--<div class="carousel-caption">-->
+              <!--<h1>如何加入本网站.</h1>-->
+              <!--<p class="lead">页面很棒，页面很炫，页面很好看</p>-->
+              <!--<a class="btn btn-large btn-primary" href="#">马上注册</a>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item">-->
+          <!--<img src="/images/examples/slide-02.jpg" alt="">-->
+          <!--<div class="container">-->
+            <!--<div class="carousel-caption">-->
+              <!--<h1>如何使用本网站.</h1>-->
+              <!--<p class="lead">采用当今世界最流行的前端框架，给用户一流的用户体验</p>-->
+              <!--<a class="btn btn-large btn-primary" href="#">了解更多</a>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item">-->
+          <!--<img src="/images/examples/slide-03.jpg" alt="">-->
+          <!--<div class="container">-->
+            <!--<div class="carousel-caption">-->
+              <!--<h1>本网站还有更多优势.</h1>-->
+              <!--<p class="lead">消除旧网站的视觉疲劳，从现在开始.</p>-->
+              <!--<a class="btn btn-large btn-primary" href="#">链接到BootStrap</a>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>-->
+      <!--<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
+    <!--</div>-->
+    <!---->
+<!--
+<<div class="container ">
+    <div class="row" >
+        <div class="col-xs-6 col-sm-3 col-md-3  col-lg-3 " style="background-color: #dedef8;
+            box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                    <button type="button" class="btn btn-primary btn-lg" style="text-shadow: black 5px 3px 3px;">
+                        <span class="glyphicon glyphicon-user"></span> User
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <span class ="glyphicon glyphicon-glass"> >玻璃 </span>
+                    </button>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">原始
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">功能</a></li>
+                            <li><a href="#">另一个功能</a></li>
+                            <li><a href="#">其他</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">分离的链接</a></li>
+                        </ul>
+                    </div>
+
+        </div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-9 col-md-9  col-lg-9 " style="background-color: #dedef8;
+            box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+
+            select2
+
+        </div>
+
+    </div>
+</div>-->
+
+
+        <article class="container">
+<section class="row" id="travel">
+        <div class="span12 panel" style="display: block;">
+        	<div class="row">
+            	<div class="span6">
+                	<div class="block-left">
+                        <form id="user_form" class="form-horizontal" role="form" action="/register" method="post">
+
+                            <div class="form-group">
+                                <label for="userName" class="col-sm-2 control-label">名字</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="userName" name="userName" placeholder="请输入名字">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userCode" class="col-sm-2 control-label">用户代码</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="userCode" name="userCode" placeholder="请输入用户代码">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="col-sm-2 control-label">密码</label>
+                                <div class="col-sm-4">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-2 control-label"></label>
+                                <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary btn-lg" onclick="return register();" >
+                                            注册
+                                </button>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="password" class="col-sm-2 control-label"></label>
+                                <div class="col-sm-4" id="msg">
+
+                                </div>
+                            </div>
+
+
+
+
+                        </form>
+
+                    </div>
+                </div>
+                
+			</div>
+        </div>
+    </section>
+<section class="row" id="apple">
+   		<div class="span12 panel relative" style="display: block;">
+        	<img src="/images/ribbon-apple.png" class="ribbon-apple">
+        	<div class="row">
+                <div class="span6">
+                	<img src="/images/mockedup-news.png" class="ipad-news">
+                </div>
+                
+                <div class="span6">
+                <div class="padding-huge">
+                    <h1>Apple</h1>
+                    <p class="wo">我对 Apple 产品的热爱近乎狂热，是一名真正的铁杆果粉。在 Steve Jobs 时代，就拥有近乎全系列的 Apple 产品。Apple 不但蕴含着一种高贵的灵魂，还透射出一种独特的魅力。我通宵排队 14 小时，买到了中国地区的第一台 iPad 2；之后又为了买 iPhone 4S 排队足足 20 小时。后来还被腾讯网评为“超级果粉”第一名。</p>
+                    <br>
+                    <a target="_blank" href="http://www.google.com/hostednews/afp/article/ALeqM5h9IrITObDmUmYjG8_3iAwiPwrwCQ?docId=CNG.ce7c362a719710baba258bff00b37376.721" class="visible-desktop">相关新闻报道 »</a>
+                </div>
+			</div>
+		</div>
+    </div>
+    </section>
+<section class="row" id="contact">
+    	<div class="span12 panel" style="display: block;">
+        	<div class="row">
+                <div class="span12">
+                	<div class="padding-large">
+                    	<h1>联系</h1>
+                        <div class="muiti-contact">
+                            <span class="email"><email title="" data-toggle="tooltip" data-original-title="Email">www</email><at class="">.cnblogs.</at><sns title="" data-toggle="tooltip" class="" data-original-title="社交网络">com</sns><web title="个人网站" data-toggle="tooltip">/sharpxiajun</web></span>
+                            <!--[if lt IE 9]>
+                            <p class="text-warning">当前浏览器不支持该模块的交互效果，无法动态展示联系方式，建议换用更高级的浏览器。</p>
+                            <p class="text-info">Twitter, Instagram, Path, 新浪微博、腾讯微博和微信的名称为 @dandyweng</p>
+                            <![endif]-->
+                        </div>
+                    </div>
+            	</div>
+                
+                <div class="span12">
+                	<div class="padding-large">
+                    	<div class="sns">
+                            <div class="sns-container">
+                                <a target="_blank" href="http://www.facebook.com/dandyweng"><div title="" data-toggle="tooltip" class="sns-icon" id="icon-facebook" data-original-title="Facebook"><img src="/images/facebook.png"></div></a>
+                                <a target="_blank" href="http://twitter.com/dandyweng"><div title="" data-toggle="tooltip" class="sns-icon" id="icon-twitter" data-original-title="Twitter"><img src="/images/twitter.png"></div></a>
+                                <a target="_blank" href="http://instagram.com/dandyweng"><div title="" data-toggle="tooltip" class="sns-icon" id="icon-instagram" data-original-title="Instagram"><img src="/images/instagram.png"></div></a>
+                                <a target="_blank" href="javascript:;"><div title="" data-toggle="tooltip" class="sns-icon" id="icon-path" data-original-title="Path"><img src="/images/path.png"></div></a>
+                            </div>
+                            <div class="sns-container">              
+                                <a target="_blank" href="http://weibo.com/dandyweng"><div title="新浪微博" data-toggle="tooltip" class="sns-icon" id="icon-sinaweibo"><img src="/images/SinaWeibo.png"></div></a>
+                                <a target="_blank" href="http://t.qq.com/dandyweng"><div title="腾讯微博" data-toggle="tooltip" class="sns-icon" id="icon-tencentweibo"><img src="/images/TencentWeibo.png"></div></a>
+                                <a target="_blank" href="javascript:;"><div title="微信" data-toggle="tooltip" class="sns-icon" id="icon-wechat"><img src="/images/wechat.png"></div></a>
+                                <a target="_blank" href="javascript:;"><div title="QQ 暂时保密" data-toggle="tooltip" class="sns-icon" id="icon-qq"><img src="/images/qq.png"></div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        </div>
+    </section>
+    </article>
+    <div class="container marketing">
+      <footer>
+        <p class="pull-right"><a href="#">操作</a></p>
+        <p>&copy; 2013 Web前端研究, Good. &middot; <a href="#">学习资料</a> &middot; <a href="#">夏森</a></p>
+      </footer>    
+    </div>
+</body>
+</html>

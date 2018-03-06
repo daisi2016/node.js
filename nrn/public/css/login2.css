@@ -1,0 +1,141 @@
+/* CSS Document */
+#login_header {
+	height: 70px;
+	width: 100%;
+	background-image: url(../images/login/titleBG.jpg);
+	background-repeat: repeat-x;
+}
+
+#login_header .logo {
+	width: 915px;
+	height: 70px;
+	margin: 0 auto;
+	background-image: url(../images/login/header.jpg);
+	background-repeat: no-repeat;
+}
+
+#login_main {
+	width: 100%;
+	background-color: #F3F3F3;
+	padding-top: 50px;
+}
+
+#login_footer {
+	height: 82px;
+	width: 100%;
+	background-image: url(../images/login/footer.jpg);
+	background-repeat: repeat-x;
+}
+
+/* HTML Controls */
+input {
+	margin-top: 5px;
+	color: #a0a0a0;
+	background: transparent;
+	width: 280px;
+	padding: 8px;
+	font-size: 14px;
+	border: 1px solid #DBDBDB;
+	height: 40px;
+	-webkit-appearance: none; /*for chrome*/
+}
+
+input[type=checkbox] {
+	color: #2E86F2 !important;
+	padding: 0px !important;
+	margin-right: 10px;
+	height: 13px;
+	width: 13px;
+}
+
+/*Bottom CSS*/
+#login_form {
+	width: 868px;
+	height: 460px;
+	margin: 0 auto;
+	background-image: url(../images/login/mainBG.jpg);
+	background-repeat: no-repeat;
+}
+
+#login_form .left_info {
+	float: left;
+	width: 440px;
+	height: 350px;
+}
+
+#login_form .right_info {
+	padding-top: 10px;
+	margin-top: 40px;
+	margin-left: 25px;
+	float: left;
+	width: 379px;
+	height: auto;
+	background-image: url(../images/login/right_pic.png);
+	background-repeat: no-repeat;
+}
+
+.login_row_layout {
+	width: 290px;
+	height: 60px;
+	font-size: 14px !important;
+	margin: 0 auto;
+	padding-top: 10px;
+	color: #666;
+	font-family: "宋体" !important;
+}
+
+.readme_checkbox {
+	float: right;
+	text-align: right;
+	color: #666;
+	font-family: "宋体" !important;
+	font-size: 12px;
+	text-align: center;
+	float: right;
+	display: block;
+	cursor: pointer;
+	height: 30px;
+	width: 60px;
+	font-weight: normal !important;
+}
+
+.readme_checkbox div {
+	margin-top: 5px;
+}
+
+.findPWD {
+	text-decoration: underline;
+	font-size: 12px;
+	float: right;
+	width: auto;
+	color: #2E86F2;
+}
+
+.margin_top_10 {
+	margin-top: 10px;
+}
+
+.div_hidden {
+	display: none;
+}
+
+/* Alert UI */
+.div_warning {
+	float: left;
+	margin: 0 auto;
+	width: auto;
+	color: #EE0101;
+	font-size: 12px;
+}
+
+/* Custom Controls */
+.login_but input[type=submit] {
+	margin-left: 12px;
+	float: left;
+	background-image: url(../images/login/login.jpg);
+	background-repeat: no-repeat;
+	width: 155px;
+	border: none;
+	height: 50px;
+	cursor: pointer;
+}

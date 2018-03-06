@@ -1,0 +1,135 @@
+.left_menu {
+	display: block;
+	float: left;
+	margin-top: 20px;
+	width: 155px;
+	min-height: 500px;
+	height: 100%;
+}
+
+#left_menu {
+	display: block;
+	float: left;
+	margin-top: 20px;
+	width: 155px;
+	min-height: 500px;
+	height: 100%;
+}
+
+.left_menu ul {
+	padding: 0;
+	width: 239px;
+	height: auto;
+}
+
+.left_menu ul li {
+	list-style: none;
+	width: 100%;
+	height: auto;
+	margin-bottom: 4px;
+}
+
+.menu_css_1 {
+	display: block;
+	width: 228px !important;
+	height: 64px;
+	background-image: url(../images/menu/menu_but_2.jpg);
+	background-repeat: no-repeat;
+	font-size: 15px;
+	font-weight: bold;
+	color: #555555;
+	padding-left: 55px;
+	padding-top: 23px;
+	font-family: "微软雅黑";
+}
+
+.menu_css_1:hover {
+	display: block;
+	width: 239px !important;
+	height: 64px;
+	background-image: url(../images/menu/menu_but_1.jpg);
+	background-repeat: no-repeat;
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu_but_on {
+	display: block;
+	width: 239px !important;
+	height: 64px;
+	background-image: url(../images/menu/menu_but_1_on.jpg) !important;
+	background-repeat: no-repeat;
+	color: #fff !important;
+}
+
+.right_mian {
+	display: block;
+	float: left;
+	width: 980px;
+	min-height: 500px;
+	padding-left: 15px;
+	overflow: auto;
+	height: 100%;
+}
+
+#right_mian {
+	display: block;
+	float: left;
+	width: 995px;
+	min-height: 500px;
+	padding-left: 15px;
+	overflow: auto;
+	height: 100%;
+}
+
+.main_center {
+	margin: 0 auto;
+	height: 100%;
+	width: 1150px;
+}
+
+.process_1 {
+	background-image: url(../images/menu/process1.jpg);
+	background-repeat: no-repeat;
+}
+
+.process_2 {
+	background-image: url(../images/menu/process2.jpg);
+	background-repeat: no-repeat;
+}
+
+.process_3 {
+	background-image: url(../images/menu/process3.jpg);
+	background-repeat: no-repeat;
+}
+
+.process_4 {
+	background-image: url(../images/menu/process4.jpg);
+	background-repeat: no-repeat;
+}
+
+.process_5 {
+	background-image: url(../images/menu/process5.jpg);
+	background-repeat: no-repeat;
+}
+
+.process_6 {
+	background-image: url(../images/menu/process6.jpg);
+	background-repeat: no-repeat;
+}
+
+/* flow process */
+.flow_process_1 {
+	background-image: url(../images/menu/AuditProcess_a.png);
+	background-repeat: no-repeat;
+}
+
+.flow_process_2 {
+	background-image: url(../images/menu/AuditProcess_b.png);
+	background-repeat: no-repeat;
+}
+
+.flow_process_3 {
+	background-image: url(../images/menu/AuditProcess_c.png);
+	background-repeat: no-repeat;
+}
